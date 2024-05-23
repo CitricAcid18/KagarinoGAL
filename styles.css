@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin: 0; /* 清除页面默认边距 */
+    padding: 0; /* 清除页面默认内边距 */
+    box-sizing: border-box; /* 使用 border-box 盒模型 */
+}
+
+header {
+    background-color: #f787f1; /* 设置页眉背景颜色 */
+    color: white; /* 设置文字颜色 */
+    padding: 1rem; /* 设置内边距 */
+    text-align: center; /* 文字居中对齐 */
+    position: relative; /* 设置相对定位 */
+}
+
+nav ul {
+    list-style: none; /* 清除列表样式 */
+    padding: 0; /* 清除内边距 */
+}
+
+nav ul li {
+    display: inline; /* 将列表项横向显示 */
+    margin: 0 1rem; /* 设置列表项之间的间距 */
+}
+
+nav ul li a {
+    color: white; /* 设置链接文字颜色 */
+    text-decoration: none; /* 清除链接下划线 */
+}
+.login {
+    position: absolute; /* 设置绝对定位 */
+    top: 1rem; /* 距离顶部的距离 */
+    right: 1rem; /* 距离右侧的距离 */
+}
+
+.login a {
+    color: white; /* 设置登录链接文字颜色 */
+    text-decoration: none; /* 清除登录链接下划线 */
+    background-color: #333; /* 设置登录链接背景颜色 */
+    padding: 0.5rem 1rem; /* 设置登录链接内边距 */
+    border-radius: 5px; /* 设置登录链接圆角 */
+}
+
+main {
+    padding: 1rem; /* 设置主要内容区域的内边距 */
+    padding: 1rem; /* 可选：设置内边距 */
+    background-image: url('Kagarino Kirie.png'); /* 设置背景图片的 URL */
+    background-size: cover; /* 可选：使背景图片铺满整个区域 */
+    background-position: center; /* 可选：将背景图片居中 */
+    background-position: center 0px; /* 水平方向居中，垂直方向向下平移 50px */
+}
+
+section {
+    margin-bottom: 2rem; /* 设置各部分之间的下边距 */
+}
+
+footer {
+    background-color: #333; /* 设置页脚背景颜色 */
+    color: white; /* 设置页脚文字颜色 */
+    text-align: center; /* 文字居中对齐 */
+    padding: 1rem; /* 设置内边距 */
+    position: fixed; /* 设置固定定位 */
+    width: 100%; /* 设置宽度为100% */
+    bottom: 0; /* 距离底部的距离 */
+}
+

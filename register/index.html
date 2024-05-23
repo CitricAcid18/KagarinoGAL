@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- HTML5 文档类型声明 -->
+<html lang="zh-cn">
+<!-- 根元素，设置语言为中文简体 -->
+<head>
+    <!-- 文档头部，包含页面元数据 -->
+    <meta charset="UTF-8">
+    <!-- 设置字符编码为 UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 设置视口，以适应不同设备的屏幕宽度和初始缩放比例 -->
+    <title>注册|KagarinoGAL</title>
+    <!-- 设置页面标题 -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* 设置页面的字体样式 */
+            display: flex; /* 将 body 设置为 Flex 容器 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 设置 body 的高度为视口高度 */
+            margin: 0; /* 清除默认的 margin */
+            flex-direction: column; /* 垂直方向布局 */
+        }
+        form {
+            max-width: 300px; /* 设置表单的最大宽度 */
+            margin: 0 auto; /* 使表单水平居中 */
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%; /* 设置输入框和提交按钮的宽度 */
+            padding: 10px; /* 设置输入框和提交按钮的内边距 */
+            margin: 5px 0; /* 设置输入框和提交按钮的上下外边距 */
+            box-sizing: border-box; /* 包括内边距和边框在内的总宽度 */
+        }
+        input[type="email"] {
+            width: 100%; /* 设置邮箱输入框的宽度 */
+            padding: 10px; /* 设置邮箱输入框的内边距 */
+            margin: 5px 0; /* 设置邮箱输入框的上下外边距 */
+            box-sizing: border-box; /* 包括内边距和边框在内的总宽度 */
+        }
+        input[type="submit"] {
+            /* 设置登录按钮的样式 */
+            width: 100%; /* 将宽度设置为100% */
+            background-color: #f787f1; /* 设置背景颜色为粉色 */
+            color: white; /* 设置文字颜色为白色 */
+            border: none; /* 清除边框 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            transition: background-color 0.3s; /* 添加过渡效果 */
+            border-radius: 5px; /* 设置圆角 */
+        }
+        input[type="submit"]:hover {
+            /* 设置登录按钮悬停时的样式 */
+            background-color: #f359eb; /* 修改背景颜色为深粉色 */
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入外部样式表 -->
+</head>
+<body>
+    <!-- 页面主体内容 -->
+    <h2>用户注册</h2>
+    <!-- 注册表单 -->
+    <form action="/register" method="post">
+        <input type="text" name="username" placeholder="用户名" required>
+        <!-- 用户名输入框，必填 -->
+        <input type="email" name="email" placeholder="邮箱" required>
+        <!-- 邮箱输入框，必填 -->
+        <input type="password" name="password" placeholder="密码" required>
+        <!-- 密码输入框，必填 -->
+        <input type="submit" value="立即注册">
+        <!-- 注册按钮 -->
+</form>
+    </form>
+    <footer>
+        <!-- 页脚部分 -->
+        <p>
+            &copy; 2024 KagarinoGAL.com<br>
+            <!-- 版权信息 -->
+            @Kagarino Kirie版权所有
+            <!-- 作者信息 -->
+        </p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // 检查用户名是否为空
+            if (username.trim() == "") {
+                alert("请输入用户名");
+                return false;
+            }
+
+            // 检查邮箱格式是否正确
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("请输入有效的邮箱地址");
+                return false;
+            }
+
+            // 检查密码长度是否符合要求
+            if (password.length < 6) {
+                alert("密码长度至少为6位");
+                return false;
+            }
+
+            // 其他验证逻辑可以根据需求添加
+
+            return true; // 如果所有验证通过，返回 true 提交表单
+        }
+    </script>
+</body>
+</html>
